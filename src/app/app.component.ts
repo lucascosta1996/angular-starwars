@@ -26,11 +26,11 @@ export class AppComponent implements OnInit {
 
     this.dataService.getCharacters( page )
       .subscribe(data => {
-        const currentPage = parseInt( this.helperService.getUrlParam( data[ 'next' ] ) )
+        const lastPage = parseInt( this.helperService.getUrlParam( data[ 'previous' ] ) )
         this.characters = data['results'];
         this.nextPage = this.helperService.getUrlParam( data[ 'next' ] );
         this.previousPage = this.helperService.getUrlParam( data[ 'previous' ] );
-        this.currentPage = currentPage - 1
+        this.currentPage = page ? page : lastPage + 1
         this.loadingCharacters = false;
       });
   }
