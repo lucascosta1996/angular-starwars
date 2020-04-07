@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ICharacter } from '../interfaces/interfaces';
 
 @Component({
@@ -6,11 +6,8 @@ import { ICharacter } from '../interfaces/interfaces';
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.scss']
 })
-export class CharactersComponent implements OnInit {
+export class CharactersComponent {
 
   @Input() characters: ICharacter[];
   @Input() loadingCharacters: boolean;
-
-  ngOnInit(): void {}
-
 }
