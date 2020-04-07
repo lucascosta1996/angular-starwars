@@ -1,7 +1,27 @@
-<h2>Characters</h2>
-<ul>
-  <span [ngClass]="{'hidden': !loadingCharacters }">Loading</span>
-  <li *ngFor="let c of characters">
-    {{ c.name }} {{ c.birth_year }}
+<header class="characters-header">
+  <figure>
+    <img src="assets/star-wars.svg" />
+  </figure>
+  <h1>Characters</h1>
+</header>
+<ul class="characters-list" [ngClass]="{'loading': loadingCharacters }">
+  <li *ngFor="let character of characters">
+    <header>
+      <h2>{{character.name}}</h2>
+    </header>
+    <section>
+      <div class="generalInfo">
+        <span class="label">Gender </span>
+        <span class="content">{{character.gender}}</span>
+      </div>
+      <div class="generalInfo">
+        <span class="label">Height </span>
+        <span class="content">{{character.height}}</span>
+      </div>
+      <div class="generalInfo">
+        <span class="label">Mass </span>
+        <span class="content">{{character.mass}}</span>
+      </div>
+    </section>
   </li>
 </ul>
