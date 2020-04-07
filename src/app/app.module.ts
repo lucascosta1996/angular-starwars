@@ -3,16 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { CharactersComponent } from './characters/characters.component';
+import { DataService } from './services/data.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HelperService } from './services/helpers.services';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PaginationComponent,
+    CharactersComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DataService,
+    HelperService,
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
