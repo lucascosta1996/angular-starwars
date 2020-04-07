@@ -24,7 +24,8 @@ import { HelperService } from './services/helpers.services';
   providers: [
     DataService,
     HelperService,
-    HttpClient
+    HttpClient,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })
