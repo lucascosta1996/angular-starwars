@@ -5,7 +5,9 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators'
 import { ICharacter } from '../interfaces/interfaces';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DataService {
 
   constructor(private http: HttpClient) {}
