@@ -1,0 +1,6 @@
+<p>pagination works!</p>
+<section>
+  <button (click)="updateListAndPagination(previousPage)" [ngClass]="{'hidden': previousPage < 1}">{{ previousPage }}</button>
+  <button disabled>{{ currentPage }}</button>
+  <button (click)="updateListAndPagination(nextPage)">{{ nextPage }}</button>
+</section>
