@@ -1,3 +1,31 @@
 .hidden {
   display: none;
 }
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  button {
+    background-color: #000;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    height: 40px;
+    margin: 5px;
+    width: 40px;
+
+    &:hover, &:disabled {
+      background-color: #F2BD41; 
+      box-shadow: 0px 0px 5px 1px #F2BD41;
+      color: #1C1A09;
+    }
+  }
+
+  
+}
