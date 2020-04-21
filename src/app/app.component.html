@@ -1,2 +1,10 @@
-  <cm-characters [characters]="characters" [loadingCharacters]="loadingCharacters"></cm-characters>
-  <cm-pagination (childEvent)="updateListAndPagination($event)" [nextPage]="nextPage" [previousPage]="previousPage" [currentPage]="currentPage"></cm-pagination>
+  <cm-characters
+    [characters]="characters"
+    [loadingCharacters]="loadingCharacters"
+  ></cm-characters>
+  <cm-pagination
+    (childEvent)="updateListAndPagination($event)"
+    [nextPage]="nextPage"
+    [previousPage]="previousPage"
+    [currentPage]="currentPage"
+  ></cm-pagination>

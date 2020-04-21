@@ -12,7 +12,7 @@ export class PaginationComponent {
   @Input() previousPage: any
   @Input() currentPage: any
 
-  updateListAndPagination( page ){
+  updateListAndPagination( page ) {
     this.childEvent.emit( page );
   }
 }
